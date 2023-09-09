@@ -1,0 +1,24 @@
+npm install @vuelidate/core @vuelidate/validators
+
+in page you want to use validate 
+
+import { useVuelidate } from "@vuelidate/core";
+import { required, email, minLength } from "@vuelidate/validators";
+
+
+  data() {
+    return {
+      v$: useVuelidate(),
+      name: "",
+      pass: "",
+      email: "",
+    };
+  },
+
+  validations() {
+    return {
+      name: { required },
+      pass: { required, minLength: minLength(8) },
+      email: { required, email },
+    };
+  },

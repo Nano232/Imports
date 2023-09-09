@@ -1,0 +1,18 @@
+npm install sweetalert
+
+in page you ant to use 
+
+import Swal from 'sweetalert';
+or
+const sweetalert = require("sweetalert");
+
+sweetalert({
+  title: "Category Added Successfully",
+  icon: "success",
+});
+
+or
+
+showAlert() {
+  Swal.fire('Hello!', 'Welcome to SweetAlert!', 'success');
+}

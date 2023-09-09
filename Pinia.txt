@@ -1,0 +1,39 @@
+ in main.js file
+
+import { createPinia } from "pinia";
+
+.use(createPinia())
+
+
+
+in page you want to use pinia ( store )
+
+import { defineStore } from "pinia";
+
+export const nameOfVariable = defineStore("nameOfStore", {
+
+  state: () => ({
+
+    flashDeals: [],
+
+    mobailPhones: [],
+
+  }),
+
+  actions: {
+
+    async getProducts() {
+
+      await axios
+
+        .get("https://dummyjson.com/products")
+
+        .then((res) => (this.flashDeals = res.data.products.slice(0, 8)))
+
+        .catch((err) => console.log(err));
+
+    },
+
+  },
+
+});
