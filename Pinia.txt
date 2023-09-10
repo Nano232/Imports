@@ -1,12 +1,11 @@
- in main.js file
+in main.js file
 
 import { createPinia } from "pinia";
 
 .use(createPinia())
 
 
-
-in page you want to use pinia ( store )
+in page you want to define pinia store ( store )
 
 import { defineStore } from "pinia";
 
@@ -37,3 +36,18 @@ export const nameOfVariable = defineStore("nameOfStore", {
   },
 
 });
+
+in page you want to use pinia 
+
+import { productsModule } from "@/stores/products";
+import { mapActions, mapState } from "pinia";
+
+  computed: {
+    ...mapState(productsModule, ["flashDeals"]),
+  },
+  methods: {
+    ...mapActions(productsModule, ["getProducts"]),
+  },
+  async mounted() {
+    await this.getProducts();
+  },
