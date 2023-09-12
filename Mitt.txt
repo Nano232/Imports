@@ -1,0 +1,12 @@
+npm install mitt
+
+in main.js
+import mitt from "mitt"
+const Emitter = mitt()
+
+.provide("Emitter", Emitter)
+
+in page you want to use 
+export default{
+	inject: ["Emiiter],
+}
