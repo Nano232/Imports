@@ -3,11 +3,12 @@ npm install swiper vue-awesome-swiper
 
 in main.js:
 import "swiper/css";
-import "swiper/css/pagenation;
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 in page you want to use swiper:
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
-import { Pagenation, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 components: {
   Swiper,
@@ -15,7 +16,25 @@ components: {
 },
   setup() {
     return {
-      modules: [Pagenation, Navigation],
+      modules: [Pagination, Navigation, Autoplay],
     };
   },
+
+====================================================
+
+    <swiper
+      :pagination="{ el: '.swiper-pagination', clickable: true }"
+      :modules="modules"
+      :slides-per-view="4"
+      :space-between="35"
+      :navigation="{ prevIcon: '.swiper-prev', nextIcon: '.swiper-next' }"
+      :autoplay="{ delay: 3000 }"
+    >
+	
+	<swiper-slide>
+		//block of code 
+	</swiper-slide>
+
+
+     </swiper>
 
