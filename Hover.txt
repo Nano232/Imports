@@ -1,0 +1,10 @@
+<v-hover v-slot="{ isHovering, props }">
+   <img
+      v-bind="props"
+      :src="category.image"
+      :style="`cursor: pointer;
+      transition: 0.4s all ease-in-out;
+      scale: ${isHovering ? 1.05 : 1};`"
+      alt="image"
+    />
+ </v-hover>

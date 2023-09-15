@@ -1,0 +1,21 @@
+in terminal:
+npm install swiper vue-awesome-swiper
+
+in main.js:
+import "swiper/css";
+import "swiper/css/pagenation;
+
+in page you want to use swiper:
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import { Pagenation, Navigation } from "swiper";
+
+components: {
+  Swiper,
+  SwiperSlide,
+},
+  setup() {
+    return {
+      modules: [Pagenation, Navigation],
+    };
+  },
+
