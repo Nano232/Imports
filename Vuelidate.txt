@@ -22,3 +22,20 @@ import { required, email, minLength } from "@vuelidate/validators";
       email: { required, email },
     };
   },
+
+    singupNow() {
+      console.log("SignUp Now");
+      this.v$.$validate(); ######
+      if (!this.v$.$error) {
+        console.log("Form Validated");
+      } else {
+        console.log("Form Not Validated");
+      }
+    },
+
+          <span class="error-feedback" v-if="v$.xxx.$error">{{
+            v$.xxx.$errors[0].$message
+          }}</span>
+
+
+

@@ -1,0 +1,18 @@
+in index.js
+
+import ErrorPage from "@/views/ErrorPage.vue";
+
+  {
+    path: "/:catchAll(.*)",
+    name: "ErroePage",
+    component: ErrorPage,
+  },
+
+
+=====================================
+
+in views
+
+you have to create page in views 
+
+name ErrorPage to import in index.js

@@ -1,5 +1,9 @@
 --------------------------------------------------------------------------------
 
+npm install bootstrap jquery popper.js normalize.css 
+npm install --save @popperjs/core / should install it to use bootstrap 
+
+
 in main.js 
   
 import "bootstrap";
