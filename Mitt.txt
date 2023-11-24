@@ -8,5 +8,5 @@ const Emitter = mitt()
 
 in page you want to use 
 export default{
-	inject: ["Emiiter],
+	inject: ["Emiiter"],
 }
