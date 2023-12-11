@@ -1,0 +1,12 @@
+const HTTPModule = require("http");
+let port = 3333;
+let HTTPServer = HTTPModule.createServer();
+
+HTTPServer.on("request", (request, response) => {
+  response.write("Hello Clint");
+  response.end();
+});
+
+HTTPServer.listen(port, () => {
+  console.log(`Server Sarted On Port ${port}`);
+});
