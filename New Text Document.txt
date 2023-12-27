@@ -1,0 +1,13 @@
+import { VSkeletonLoader } from "vuetify/lib/labs/components.mjs";
+        
+  components: {
+    VSkeletonLoader,
+  },
+
+	<v-col cols="12">
+          <v-row>
+            <v-col cols="3" v-for="num in 4" :key="num">
+              <v-skeleton-loader type="image, article"></v-skeleton-loader>
+            </v-col>
+          </v-row>
+        </v-col>
